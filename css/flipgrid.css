@@ -1,0 +1,65 @@
+/* 
+flipgrid.css
+flipgrid.js styling.
+
+Eric Leong
+October 12, 2012
+
+Copyright (c) 2012, Eric Leong
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+.tile-container {
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	z-index: 1;
+	width: 20%;
+	
+	vertical-align: top;
+
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.tile-container:hover{
+	cursor: pointer;
+}
+
+.tile-card {
+	padding-bottom: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform .5s linear;
+	transform-style: preserve-3d;
+	transition: transform .5s linear;
+}
+
+.flip .tile-card {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.tile {
+	position: absolute;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.tile.front {
+	background-size: cover;
+	background-position: center center;
+}
+
+.tile.back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}

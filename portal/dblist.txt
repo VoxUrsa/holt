@@ -1,0 +1,15 @@
+sub_id
+
+
+$sub_fname
+$sub_lname
+$sub_email
+$sub_company
+$sub_add1
+$sub_add2
+$sub_city
+$sub_state
+$sub_zip
+$sub_note
+$sub_contact_preference
+$sub_enroll_date
